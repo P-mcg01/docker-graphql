@@ -36,7 +36,7 @@ jobs:
     - name: Build Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
-      run:
+      run: |
         docker build -t pmcg4045/docker-graphql:$NEW_VERSION .
         docker build -t pmcg4045/docker-graphql:latest .
         
